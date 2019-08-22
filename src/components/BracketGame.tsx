@@ -32,10 +32,12 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
     hoveredTeamId: null,
 
     styles: {
-      backgroundColor: '#58595e',
+      #backgroundColor: '#58595e',
+      backgroundColor: '#fff',
       hoverBackgroundColor: '#222',
 
-      scoreBackground: '#787a80',
+      #scoreBackground: '#787a80',
+      scoreBackground: '#fff',
       winningScoreBackground: '#ff7324',
       teamNameStyle: { fill: '#fff', fontSize: 12, textShadow: '1px 1px 1px #222' },
       teamScoreStyle: { fill: '#23252d', fontSize: 12 },
@@ -136,14 +138,14 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
         <rect x="0" y="12" width="200" height="45" fill={backgroundColor} rx="3" ry="3"/>
 
         {/* background for the top team */}
-        <rect x="0" y="12" width="200" height="22.5" fill={topHovered ? hoverBackgroundColor : backgroundColor} rx="3"
+        <rect x="0" stroke='#58595e' y="12" width="200" height="22.5" fill={topHovered ? hoverBackgroundColor : backgroundColor} rx="3"
               ry="3"/>
         {/* background for the bottom team */}
-        <rect x="0" y="34.5" width="200" height="22.5" fill={bottomHovered ? hoverBackgroundColor : backgroundColor}
+        <rect x="0" stroke='#58595e' y="34.5" width="200" height="22.5" fill={bottomHovered ? hoverBackgroundColor : backgroundColor}
               rx="3" ry="3"/>
 
         {/* scores background */}
-        <rect x="170" y="12" width="30" height="45" fill={scoreBackground} rx="3" ry="3"/>
+        <rect x="170" y="12" stroke='#58595e' width="30" height="45" fill={scoreBackground} rx="3" ry="3"/>
 
         {/* winner background */}
         {winnerBackground}
