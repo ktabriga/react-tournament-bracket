@@ -32,14 +32,14 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
     hoveredTeamId: null,
 
     styles: {
-      #backgroundColor: '#58595e',
+      //backgroundColor: '#58595e',
       backgroundColor: '#fff',
       hoverBackgroundColor: '#222',
 
-      #scoreBackground: '#787a80',
+      //scoreBackground: '#787a80',
       scoreBackground: '#fff',
       winningScoreBackground: '#ff7324',
-      teamNameStyle: { fill: '#fff', fontSize: 12, textShadow: '1px 1px 1px #222' },
+      teamNameStyle: { fill: '#000', fontSize: 12},
       teamScoreStyle: { fill: '#23252d', fontSize: 12 },
       gameNameStyle: { fill: '#999', fontSize: 10 },
       gameTimeStyle: { fill: '#999', fontSize: 10 },
