@@ -127,22 +127,15 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
 
     return (
       <svg width="200" height="82" viewBox="0 0 200 82" {...rest}>
-        {/* game time */}
-        <text x="100" y="8" textAnchor="middle" style={gameTimeStyle}>
-          {topText(game)}
-        </text>
-
         {/* backgrounds */}
 
         {/* base background */}
         <rect x="0" y="12" width="200" height="45" fill={backgroundColor} rx="3" ry="3"/>
 
         {/* background for the top team */}
-        <rect x="0" stroke='#58595e' y="12" width="200" height="22.5" fill={topHovered ? hoverBackgroundColor : backgroundColor} rx="3"
-              ry="3"/>
+        <rect x="0" stroke='#58595e' y="12" width="200" height="22.5" fill={backgroundColor} rx="3" ry="3"/>
         {/* background for the bottom team */}
-        <rect x="0" stroke='#58595e' y="34.5" width="200" height="22.5" fill={bottomHovered ? hoverBackgroundColor : backgroundColor}
-              rx="3" ry="3"/>
+        <rect x="0" stroke='#58595e' y="34.5" width="200" height="22.5" fill={backgroundColor} rx="3" ry="3"/>
 
         {/* scores background */}
         <rect x="170" y="12" stroke='#58595e' width="30" height="45" fill={scoreBackground} rx="3" ry="3"/>
@@ -166,9 +159,6 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
         <line x1="0" y1="34.5" x2="200" y2="34.5" style={teamSeparatorStyle}/>
 
         {/* game name */}
-        <text x="100" y="68" textAnchor="middle" style={gameNameStyle}>
-          {bottomText(game)}
-        </text>
       </svg>
     );
   }
